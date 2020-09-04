@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+    <listeners>
+        <listener class-name="utils.listeners.ListenerTestNG"/>
+    </listeners>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://www.fravega.com/"/>
+    <test name="Fravega Test">
+        <parameter name="elementToFind" value="Heladera"/>
+        <classes>
+            <class name="tests.HomePageTest"/>
+        </classes>
+    </test>
+</suite>
